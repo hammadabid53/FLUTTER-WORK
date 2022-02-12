@@ -1,0 +1,54 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'My First Flutter App',
+      home: Mywidget(),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+    );
+  }
+}
+
+class Mywidget extends StatefulWidget {
+  @override
+  MywidgetState createState() => MywidgetState();
+}
+
+class MywidgetState extends State<Mywidget> {
+  int _counter = 0;
+  increaseCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("First application"),
+        backgroundColor: Colors.indigo,
+      ),
+      body: Center(
+        child: Text("you have clicked $_counter times"),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          increaseCounter();
+        },
+        child: Icon(Icons.add),
+      ),
+    );
+  }
+}
