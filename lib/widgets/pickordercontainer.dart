@@ -26,7 +26,7 @@ class PickOrderContainer extends StatelessWidget {
             padding: const EdgeInsets.all(6.0),
             child: Container(
               width: 10 * 13.w,
-              color: whitecolor,
+              //color: whitecolor,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
